@@ -1,0 +1,112 @@
+body{
+    --inaltime-meniu: 2.5rem;
+}
+
+nav ul.meniu ul{
+    /*implicit submeniul e ascuns*/
+    display: none;
+	position: absolute;/* ca sa il scot din container pe alt layer, sa nu imi deplaseze continutul cand devine vizibil*/
+	width:100%;
+}
+
+nav{    
+    height: var(--inaltime-meniu);
+    width: 100%;
+    top: 0;
+    background: var(--color5);
+    z-index:10;
+    /*ca sa fie pozitionat normal in partea de sus a containerului, sub sigla, 
+    dar apoi cand dam scroll sa ramana fix pe ecran*/
+    position: sticky;
+}
+nav ul.meniu>li{
+    float: left;
+    width: 110px;
+	position: relative;/* pentru ca submeniul pozitionat relativ sa aiba ca referinta parintele li*/
+}
+
+.gradientBar{
+    outline: thin solid black;
+    overflow: hidden;
+}
+
+.gradientBar::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(to right, var(--color5), var(--color2));
+    transition: all 1s;
+    transform: translateX(100%);
+}
+
+.gradientBar:hover::before{
+    transform: translateX(0);
+}
+
+nav ul, nav li{
+    padding: 0;
+    margin: 0;
+}
+nav ul.meniu li{
+    text-align: center;
+    /*ascundem bullets*/
+    list-style-type: none;
+    background: var(--color5);
+    cursor: pointer;
+}
+nav ul.meniu li a, nav ul.meniu li div{
+    text-decoration: none;
+    color: white;
+    display: block;
+    font-weight: bold;
+    /*inaltimea butonului si inaltimea liniei de text sunt identice 
+    pentru a centra textul pe verticala in element
+     - merge doar daca textul are o singura linie*/
+    height: var(--inaltime-meniu);
+    line-height: var(--inaltime-meniu);
+    outline: thin solid black;
+}
+ul.meniu a:hover, ul.meniu div:hover{
+    background: var(--color5);
+}
+
+ul.meniu a, ul.meniu div{
+   transition: background 200ms ease; 
+}
+
+/*deschidere submeniu*/
+nav ul.meniu>li:hover>ul{
+	display: block;
+    animation-name: aparitie_meniu;
+    animation-iteration-count: 1;
+    animation-duration: 0.4s;
+    animation-timing-function: linear;
+}
+
+#hamburger{
+    display: none;
+    height: var(--inaltime-meniu);
+}
+#ch-menu{
+    display: none ;
+}
+#hamburger img{
+    height:100%;
+    width:auto;
+}
+
+
+@keyframes aparitie_meniu{
+    0%{
+        transform:scale(1,0);
+    }
+    50%{
+        transform:scale(1,0.5);
+    }
+    100%{
+        transform:scale(1,1);
+    }
+}
