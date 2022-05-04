@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta name="keywords" content="muzica, instrumente, sunet, audio, profesionist, chitara, tobe, bass, bete de tobe, chitara electrica, chitara clasica, chitara acustica, saxofon, clarinet, vioara, melodie, cursuri, amplificator, sistem audio, boxe, casti">
+        <meta name="description" content="Magazin de instrumente muzicale">
+        <meta name="author" content="Radu Mihai Gheorghe">
+        <%- include("../fragmente/head.ejs"); %> 
+        <title>R_Music</title>
+    </head>
+    <body>
+        <%- include("../fragmente/header.ejs"); %> 
+        <main>
+            <p id="watermark"></p>
+            <p id="absolut"></p>
+            <div class="wrapper">   
+                <div id="area1" class="wrapperSection">
+                    <h2>Aici vor fi imagini de prezentare.</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit aliquet vestibulum. Vestibulum quis sagittis tellus, a pulvinar massa. Phasellus tempor velit vitae felis dignissim scelerisque. Sed at risus a ligula pharetra fringilla at eget leo. Nullam faucibus ante in maximus mattis. Nullam et felis cursus, scelerisque nunc in, luctus odio. Morbi quis quam augue. Vestibulum iaculis nibh nec sem pretium, vel varius quam ornare.</p>
+                </div>
+                <div id="area2" class="wrapperSection">
+                    <h2>Orar</h2>
+                    <div id="tableContainer">
+                        <table id="tab-orar">
+                            <thead>
+                                <tr class="columnAlternate">
+                                    <th>Perioadă</th>
+                                    <th>Zi</th>
+                                    <th>Interval dimineata</th>
+                                    <th>Pauza de masa</th>
+                                    <th>Interval seară</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="columnAlternate">
+                                    <td rowspan="5">Zile<br/>Lucrătoare</td>
+                                    <td>Luni</td>
+                                    <td>10-12</td>
+                                    <td>12-14</td>
+                                    <td>14-20</td>
+                                </tr>
+                                <tr class="columnAlternateReverse">
+                                    <td>Marti</td>
+                                    <td>9-12</td>
+                                    <td>12-14</td>
+                                    <td>14-21</td>
+                                </tr>
+                                <tr class="columnAlternateReverse">
+                                    <td>Miercuri</td>
+                                    <td>9-11</td>
+                                    <td>11-13</td>
+                                    <td>14-21</td>
+                                </tr>
+                                <tr class="columnAlternateReverse">
+                                    <td>Joi</td>
+                                    <td>9-11</td>
+                                    <td>11-13</td>
+                                    <td>14-21</td>
+                                </tr>
+                                <tr class="columnAlternateReverse">
+                                    <td>Vineri</td>
+                                    <td>9-12</td>
+                                    <td>12-14</td>
+                                    <td>14-19</td>
+                                </tr>
+                                <tr class="columnAlternate">
+                                    <td rowspan="2">Weekend</td>
+                                    <td>Sambata</td>
+                                    <td>10-12</td>
+                                    <td>12-13</td>
+                                    <td>13-16</td>
+                                </tr>
+                                <tr class="columnAlternateReverse">
+                                    <td>Duminica</td>
+                                    <td>10-14</td>
+                                    <td>-</td>
+                                    <td>inchis</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr class="columnAlternate">
+                                    <td colspan="6">Va asteptam cu mare drag!</td>
+                                </tr>
+                            </tfoot>
+                            <caption id="orarCaption">Orarul nostru.</caption>
+                        </table> 
+                    </div>
+                </div>
+                <div id="area3" class="wrapperSection">
+                    <h2>Aici va fi calendarul de evenimente.</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit aliquet vestibulum. Vestibulum quis sagittis tellus, a pulvinar massa. Phasellus tempor velit vitae felis dignissim scelerisque. Sed at risus a ligula pharetra fringilla at eget leo. Nullam faucibus ante in maximus mattis. Nullam et felis cursus, scelerisque nunc in, luctus odio. Morbi quis quam augue. Vestibulum iaculis nibh nec sem pretium, vel varius quam ornare.</p>
+                </div>
+                <div id="area4" class="wrapperSection">
+                    <h2>Aici va fi zona pentru anunturi.</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit aliquet vestibulum. Vestibulum quis sagittis tellus, a pulvinar massa. Phasellus tempor velit vitae felis dignissim scelerisque. Sed at risus a ligula pharetra fringilla at eget leo. Nullam faucibus ante in maximus mattis. Nullam et felis cursus, scelerisque nunc in, luctus odio. Morbi quis quam augue. Vestibulum iaculis nibh nec sem pretium, vel varius quam ornare.</p>
+                </div>
+                <div id="area5" class="wrapperSection">
+                    <h2>Aici va fi lista de utilizatori online.</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit aliquet vestibulum. Vestibulum quis sagittis tellus, a pulvinar massa. Phasellus tempor velit vitae felis dignissim scelerisque. Sed at risus a ligula pharetra fringilla at eget leo. Nullam faucibus ante in maximus mattis. Nullam et felis cursus, scelerisque nunc in, luctus odio. Morbi quis quam augue. Vestibulum iaculis nibh nec sem pretium, vel varius quam ornare.</p>
+                </div>
+                <div id="area6" class="wrapperSection">
+                    <h2>Aici vor fi date despre utilizatori si statistici.</h2>
+                    <p>IP-ul tau este: <%- locals.ip %></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit aliquet vestibulum. Vestibulum quis sagittis tellus, a pulvinar massa. Phasellus tempor velit vitae felis dignissim scelerisque. Sed at risus a ligula pharetra fringilla at eget leo. Nullam faucibus ante in maximus mattis. Nullam et felis cursus, scelerisque nunc in, luctus odio. Morbi quis quam augue. Vestibulum iaculis nibh nec sem pretium, vel varius quam ornare.</p>
+                </div>
+                <div id="area7" class="wrapperSection">
+                    <h2>Aici vor fi date ce tin de site si de server.</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit aliquet vestibulum. Vestibulum quis sagittis tellus, a pulvinar massa. Phasellus tempor velit vitae felis dignissim scelerisque. Sed at risus a ligula pharetra fringilla at eget leo. Nullam faucibus ante in maximus mattis. Nullam et felis cursus, scelerisque nunc in, luctus odio. Morbi quis quam augue. Vestibulum iaculis nibh nec sem pretium, vel varius quam ornare.</p>
+                </div>
+                <div id="area8" class="wrapperSection">    
+                    <h2>Aici vor fi chestii ce tin de punctul 8.</h2>
+                    <video controls poster="/resurse/img/p1-tablet.jpg" preload="auto" class="videoVTT">
+                        <source src="/resurse/video/guitarVideo.mp4" type="video/mp4">
+                        <source src="/resurse/video/guitarVideo.ogv" type="video/ogv">
+                        <track default src="/resurse/video/tracks/mesaje_ro.vtt" kind="captions" srclang="ro" label="Romana" />
+                        <track  src="/resurse/video/tracks/mesaje_en.vtt" kind="captions" srclang="en" label="Engleza" />
+                      </video>
+                                       
+                </div>
+            </div>
+
+            <%- include("../fragmente/galerie_statica.ejs"); %> 
+
+            <section id="welcome">
+                <h2>Bine ati venit!</h2>
+                <p>Bine v-am gasit pe cel mai nou si profesionist site de instrumente si accesorii muzicale.</p>
+                <figure id="instrumente">
+                    <img sizes="(min-width:600px) 640px, (min-width:300px) 320px, 160px"
+                        srcset="resurse/img/p1-desktop.jpg 640w, resurse/img/p1-tablet.jpg 320w, resurse/img/p1-mobile.jpg 160w"
+                        src="resurse/img/p1-mobile.png"
+                        alt="instrumente">
+                    <figcaption>Cateva articole din catalogul nostru de produse.</figcaption>
+                </figure>
+            </section>
+            <section id="instrumente">
+                <h2>Instrumente muzicale</h2>
+                <div class="btn">
+                    <div class="btn-iframe">
+                        <a href="https://www.youtube.com/embed/3anNG7TfHSQ" target="ifr-video">Link 1</a>
+                        <a href="https://www.youtube.com/embed/dsJtgmAhFF4" target="ifr-video">Link 2</a>
+                        <a href="https://www.youtube.com/embed/Wtxbt-CpA2s" target="ifr-video">Link 2</a><br/>
+                    </div>
+                    <iframe class="vid-iframe" width="500" height="315" src="https://www.youtube.com/embed/3anNG7TfHSQ" name="ifr-video"
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p>Aici gasiti toate instrumentele muzicale pe care le oferim spre vanzare.</p>
+                <section id="chitare">
+                    <h3>Chitare<span> <span class="fas fa-guitar fa-solid fa-fw fa-spin-hover"></span></h3>
+                    <p><a href="https://www.muziker.ro/" target="_blank">Un site asemanator.</a></p>
+                    <ul>
+                        <li><a href="#chitareElectrice">Electrice</a></li>
+                        <li><a href="#chitareAcustice">Acustice</a></li>
+                        <li><a href="#chitareClasice">Clasice</a></li>
+                        <li><a href="#chitareElectroAcustice">Electro-acustice</a></li>
+                        <li><a href="#chitareUkulele">Ukulele</a></li>
+                    </ul>
+                    <h3>Basuri<span> <span class="fas fa-guitar fa-solid fa-fw fa-spin-hover"></span></h3>
+                    <ul>
+                        <li><a href="#basuriElectrice">Electrice</a></li>
+                        <li><a href="#basuriAcustice">Acustice</a></li>
+                    </ul>
+                </section>
+            </section>
+            <section id="promotii">
+                <h2>Promoții</h2>
+                <article>
+                    <h3 class="titlu">Transport gratuit la comenzile de minim 200 de ron!</h3>
+                    <p>La orice comanda de minim 200 de ron, aveti asigurat transportul gratuit din partea noastra!</p>
+                </article>
+                <article>
+                    <h3>La o chitara electrica cumparata, primiti si un cablu Ibanez gratuit!</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec justo sapien. Curabitur eu neque metus. Nunc dictum facilisis ante, id sagittis tellus sollicitudin nec. </p> 
+                    <p>De asemenea, mai sunt valabile urmatoarele:</p>
+                    <ol>
+                        <li>Promotie 1</li>
+                        <li>Promotie 2</li>
+                        <li>Promotie 3</li>
+                    </ol>
+                </article>
+            </section>
+            <section id="detalii">
+                <h2>Detalii</h2>
+                <p><b>Detalii</b> despre platforma:</p>
+                <aside>
+                    <ul>
+                        <li>Stilizarea a fost facuta cu ajutorul <abbr title="Cascading Style Sheets">CSS</abbr></li>
+                        <li>Este menita sa permita tuturor utilizatorilor sa achizitioneze orice instrument muzical dorit.</li>
+                        <li>Produse calitative si calitate garantata!</li>
+                        <li><i>Retur gratuit in maxim 30 de zile.</i></li>
+                    </ul>
+                </aside>
+                <p><dfn>CSS</dfn> este un standard pentru formatarea elementelor unui document HTML</p>
+            </section>
+            <details id="oferte">
+                <summary>Detalii despre oferte</summary>
+                    <i>Jesus Chrysler!</i><p>Adica, croaziera, cum ar veni, nu?</p>
+                    <p><em>Nu puteti</em> rata ofertele astea!</p>
+                    <p>La orice comanda de minim <s>200</s> <ins>100</ins> de ron, aveti asigurat transportul gratuit din partea noastra!</p>
+                    <p>La o chitara electrica cumparata, primiti si un cablu Ibanez gratuit!</p>
+            </details><br>
+            <section id="warning">
+                <h2><strong>Atentie! Covid inca este printre noi! Purtati masca!</strong></h2>
+                <p>Asa cum spunea Gheorghe Hagi: <q>Viata e frumoasa, dar merita traita!</q></p>
+            </section>
+            <section id="faq">
+                <h2>F.A.Q.</h2>
+                <p>Cele mai comune intrebari:</p>
+                <aside>
+                    <ol>
+                        <li>Cum plasez o comanda?</li>
+                        <ul><li>Poti plasa o comanda adaugand produse in cos, iar apoi apasa butonul "Plaseaza Comanda".</li></ul>
+                        <li>Cum imi fac cont?</li>
+                        <ul><li>Iti poti crea un cont de pe butonul de Inregistrare, iar apoi urmeaza pasii.</li></ul>
+                        <li>Cum fac retur?</li>
+                        <ul><li>Daca doresti sa faci retur, apasa butonul de retur odata intrat in cont si urmeza pasii.</li></ul>
+                    </ol>
+                </aside>
+            </section>
+            <a href="./resurse/sound/ucl.mp3" download>Descarca de aici o melodie frumoasa.</a>
+        </main>
+        <%- include("../fragmente/footer.ejs"); %> 
+    </body>
+</html>

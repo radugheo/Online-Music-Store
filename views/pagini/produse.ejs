@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <meta name="keywords" content="muzica, instrumente, sunet, audio, profesionist, chitara, tobe, bass, bete de tobe, chitara electrica, chitara clasica, chitara acustica, saxofon, clarinet, vioara, melodie, cursuri, amplificator, sistem audio, boxe, casti">
+        <meta name="description" content="Magazin de instrumente muzicale">
+        <meta name="author" content="Radu Mihai Gheorghe">
+        <title>R_Music</title>
+        <%- include("../fragmente/head") %>     
+        <link rel="stylesheet" href="/resurse/css/produse.css" type="text/css" />
+        <script type="text/javascript" src=/resurse/js/produse.js></script>
+    </head>
+    <body>
+    <%- include("../fragmente/header") %>
+
+    <main>
+        <section id="filtrare">
+            <h2>Filtrare</h2>
+            <label>Nume: <input type="text" id="inp-nume"></label>
+            <br></br>
+            <div>Pentru stangaci:
+                <label>Da
+                    <input id="i_rad1" name="gr_rad" value="1" type="radio"/>
+                </label>
+                <label>Nu
+                    <input id="i_rad2" name="gr_rad" value="2" type="radio"/>
+                </label>
+                <label>Toate
+                    <input id="i_rad3" checked name="gr_rad" value="toate" type="radio"/>
+                </label><br></br>
+            </div>
+            <div>Culoare: 
+                <label>Galben
+                    <input id="i_check1" name="gr_chck" value="10" type="checkbox"/>
+                </label>
+                <label>Rosu
+                    <input id="i_check2" name="gr_chck" value="20" type="checkbox"/>
+                </label>
+                <label>Albastru
+                    <input id="i_check3" name="gr_chck" value="30" type="checkbox"/>
+                </label><br></br>
+                <label>Alb
+                    <input id="i_check4" name="gr_chck" value="40" type="checkbox"/>
+                </label>
+                <label>Negru
+                    <input id="i_check5" name="gr_chck" value="50" type="checkbox"/>
+                </label>
+                <label>Roz
+                    <input id="i_check6" name="gr_chck" value="60" type="checkbox"/>
+                </label><br></br>
+                <label>Maro
+                    <input id="i_check7" name="gr_chck" value="70" type="checkbox"/>
+                </label>
+                <label>Visiniu
+                    <input id="i_check7" name="gr_chck" value="80" type="checkbox"/>
+                </label>
+                <label>Gri
+                    <input id="i_check8" name="gr_chck" value="90" type="checkbox"/>
+                </label><br></br>
+            </div>
+            <label> Pret minim: <input type="range" id="inp-pret1" value="0" min="0"  max="30000"> <span id="infoRange1">(0)</span></label>
+            <label> Pret maxim: <input type="range" id="inp-pret2" value="30000" min="0"  max="30000"> <span id="infoRange2">(30000)</span></label>
+            <br></br>
+            <label>Selecteaza categoria:
+                <select id="inp-categorie">
+                    <option id="sel-toate" selected value="toate">toate</option>
+                    <% for (let opt of locals.optiuni) { %>
+                        <option value="<%- opt.unnest %>"><%- opt.unnest %> </option>
+                    <% } %>
+                </select>
+            </label>
+            <p>
+                <button id="filtrare">Filtreaza</button> 
+                <button id="resetare">Reseteaza</button> 
+                <button id="sortCrescPret">Sorteaza crescator pret</button>
+                <button id="sortDescrescPret">Sorteaza descrescator pret</button>
+            </p>
+            
+            <p id="p-suma">Apăsați Alt+"c" pentru suma preturilor produselor afișate. </p>
+        </section>
+        <section id="produse">
+            <h2>Produse</h2>
+            <div class="grid-produse">
+                <% for(let prod of locals.produse) { %>
+                    <article class="produs" >
+                        <h3 class="nume"><a href="/produs/<%-prod.id %>" ><span class="val-nume"><%- prod.nume%></span></a></h3>
+                        <div class="info-prod">
+                            <p class="pret">Pret: <span class="val-pret"><%- prod.pret%></span> RON</p>
+                            <p class="culoare">Culoare: <span class="val-culoare"><%- prod.culoare%></span></p>
+                            <p class="greutate">Greutate: <span class="val-greutate"><%- prod.greutate%></span>KG</p>
+                            <p class="stangaci">Pentru stangaci: <span class="val-stangaci"><%- prod.pentru_stangaci%></span></p>
+                        </div>
+                        <p class="categorie">Categorie: <span class="val-categorie"><%- prod.categorie%></span></p>
+                        <figure>
+                            <a href="/produs/<%-prod.id %>" ><img src="/resurse/img/produse/<%- prod.imagine %>" style="width:50%;height:auto;" alt="imagine <%- prod.nume %>" /></a>
+                        </figure>
+                        <label class="selecteaza-cos">
+                            Selectează:<br/>
+                            <input type="checkbox" class="select-cos" value="<%-prod.id %>" autocomplete="off">
+                        </label>
+                    </article>
+                <% }%>
+            </div>
+        </section>
+    </main>
+
+    <%- include("../fragmente/footer") %>
+    </body>
+</html>

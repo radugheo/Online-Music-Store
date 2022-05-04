@@ -1,0 +1,24 @@
+{
+    "cale_baza": "resurse/img/erori",
+    "erori": [
+        {
+            "identificator":404,
+            "titlu":"404 Not Found",
+            "text": "Pagina pe care o căutați nu există",
+            "imagine":"broken_vinyl.jpg"
+        },
+        {
+            "identificator":403,
+            "titlu":"403 Forbidden",
+            "text": "Accesul interzis",
+            "imagine":"locked_cd.jpg"
+        },
+
+        {
+            "identificator":1,
+            "titlu":"Work in Progress",
+            "text": "Această pagină este în curs de dezvoltare",
+            "imagine":"confused.jpg"
+        }
+    ]
+  }

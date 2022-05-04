@@ -1,0 +1,118 @@
+#galerie_statica{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 100px;
+    text-align: center;
+    justify-content: center;
+    width: 900px;
+    margin: auto;
+    margin-top: 80px;
+    counter-reset: nrimag 0;
+}
+
+#galerie_statica figure:nth-child(1){
+    grid-area: 1/1/2/2;
+}
+
+#galerie_statica figure:nth-child(2){
+    grid-area: 1/2/2/3;
+}
+
+#galerie_statica figure:nth-child(3){
+    grid-area: 1/3/2/4;
+}
+
+#galerie_statica figure:nth-child(4){
+    grid-area: 2/1/2/2;
+}
+
+#galerie_statica figure:nth-child(5){
+    grid-area: 2/3/2/3;
+}
+
+#galerie_statica figure:nth-child(6){
+    grid-area: 3/3/3/1;
+}
+
+#galerie_statica figure:nth-child(7){
+    grid-area: 3/3/3/2;
+}
+
+#galerie_statica figure:nth-child(8){
+    grid-area: 3/3/4/4;
+}
+
+#galerie_statica figure:nth-child(9){
+    grid-area: 4/1/5/2;
+}
+
+#galerie_statica figure:nth-child(10){
+    grid-area: 4/3/5/4;
+}
+
+#galerie_statica figure:nth-child(11){
+    grid-area: 5/1/6/2;
+}
+
+#galerie_statica figure:nth-child(12){
+    grid-area: 5/2/6/3;
+}
+
+#galerie_statica figure:nth-child(13){
+    grid-area: 5/3/6/4;
+}
+
+#galerie_statica figure:nth-child(14){
+    grid-area: 6/1/7/2;
+}
+
+#galerie_statica figure:nth-child(15){
+    grid-area: 6/3/7/4;
+}
+
+#galerie_statica figure{
+    transition: 0.125s;
+    opacity: 1;
+    border-radius: 0;
+    border: 1px solid;
+    margin: 0;
+    text-align: center;
+    margin: auto;
+}
+
+#galerie_statica figure:hover{
+    transform: scale(1.4);
+    transition: 0.125s;
+    opacity: 0.5;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#galerie_statica figcaption{
+    background-color: var(--color5);
+    margin-top: 0;
+    width: 300px;
+    text-align: center;
+    margin: auto;
+    font-size: 15px;
+    color: white;
+    counter-increment: nrimag 1; 
+}
+
+#galerie_statica figcaption::before{
+    content: counter(nrimag, lower-roman) ") "
+}
+
+#galerie_statica figure{
+    margin: 0;
+    padding: 0;
+    width: 300px;
+}
+
+#galerie_statica img{
+    vertical-align: middle;
+}
+
+

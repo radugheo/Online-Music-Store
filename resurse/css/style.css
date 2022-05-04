@@ -1,0 +1,276 @@
+body {
+    --color1: #e0af3a;
+    --color2: #ffe5a1;
+    --color3: #711f31;
+    --color4: #9e3845;
+    --color5: #355367;
+    background-color: var(--color2);
+    font-family: 'Quicksand';
+}
+
+.wrapper{
+    display: grid;
+    width: 100%;
+    grid-template-areas: 
+                    "zona-1 zona-1 zona-1 zona-1"
+                    "zona-3 zona-2 zona-2 zona-4"
+                    "zona-8 zona-8 zona-8 zona-8"
+                    "zona-7 zona-7 zona-5 zona-6";      
+    grid-template-columns: 1fr 1fr 1fr 1fr;        
+}
+.wrapperSection{
+    background-color: #e0af3a;
+    padding: 10px;
+}
+#area1{  
+    grid-area: zona-1; 
+}
+#area2{  
+    grid-area: zona-2; 
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    /*ultimele 3 linii sunt pentru tabel*/
+}
+#area3{  
+    grid-area: zona-3;
+}
+#area4{  
+    grid-area: zona-4; 
+}
+#area5{  
+    grid-area: zona-5; 
+}
+#area6{  
+    grid-area: zona-6; 
+}
+#area7{  
+    grid-area: zona-7; 
+}
+#area8{  
+    grid-area: zona-8; 
+    text-align: center;
+}
+
+@media (max-width: 500px) {
+    .wrapper {
+        grid-template-areas:
+            "zona-1  zona-1"
+            "zona-2  zona-3"
+            "zona-2  zona-4"
+            "zona-5  zona-6"
+            "zona-7  zona-8";
+        grid-template-columns: 1fr 1fr;
+    }
+    .wrapper p{
+        font-size: 0.5em;
+    }
+}
+
+@media (max-width: 700px) {
+    .wrapper {
+        grid-template-areas:
+            "zona-1  zona-1  zona-1  zona-1"
+            "zona-2  zona-2  zona-3  zona-3"
+            "zona-2  zona-2  zona-4  zona-4"
+            "zona-8  zona-8  zona-8  zona-8"
+            "zona-5  zona-6  zona-6  zona-7";
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    .wrapper p{
+        font-size: 0.75em;
+    }
+}
+
+.videoVTT{
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+::cue{
+    background-color: #355367;
+    color: white;
+}
+
+.btn{
+    display: flex;
+}
+
+.btn-iframe{
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-iframe a{
+    text-decoration:none;
+    width:100px;
+    border:1px solid black;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    background-color: var(--color4);
+    color:black;
+    transition: all 0.5s linear;
+    text-align: center;
+}
+
+.btn-iframe a+a{
+    margin-top:2px;
+}
+
+.btn-iframe a:hover{
+    color:white;
+    background-color: var(--color3);
+}
+
+.vid-iframe{
+    border: 2px solid black;
+}
+
+.fa-spin-hover:hover {
+    animation: fa-spin 2s infinite linear;
+}  
+
+#link-top{
+    position: fixed;
+    opacity:0.7;
+
+    bottom:5px;
+    right:12px;
+    width:40px;
+    height:40px;
+    background:rgba(0, 0, 0, 0);
+    border-radius: 1.5rem;
+    border:6px solid var(--color5);
+    border-top: none;
+    border-bottom: none;
+}
+#link-top:hover{
+    opacity:1;
+}
+#triangle{
+    position:absolute;
+    bottom:16px;
+    right:20%;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid var(--color5);   
+    transition: all 0.7s;
+    transform: translateY(0);
+}
+#triangle:hover{
+    transition: all 0.7s;
+    transform: translateY(-70%);
+    border-bottom: 15px solid var(--color4);  
+}
+
+
+
+#watermark, #absolut{
+    display: none;
+}
+
+@media print {
+
+    #absolut{
+        position: absolute;
+        display: inline-block;
+        bottom: 3cm;
+        width:70%;
+        margin-right:0 auto;
+        margin-left:0 auto;
+        overflow: visible;
+    }
+    #absolut::after{
+        content:"Element poziționat absolut pe a doua pagină. Pentru a vedea stilul de printare apăsați Ctrl+P.";
+        position: absolute;
+        font-size:10px;
+        right:0;
+        border:4px inset black;
+        width:70%;
+        display: inline-block;
+    }
+
+    h1{
+        page-break-after: always;
+        margin-top: 50%;
+        text-align:center;
+        margin-left:1cm;
+    }
+
+    .wrapperSection{
+        font-size: 10px;
+        box-sizing:border-box;
+        page-break-before:always;
+        background-color: white;
+        /*
+            grid-template-rows: calc(100vh - 10px) 100vh 100vh 100vh;*/
+
+        display:block;
+    }
+    html, body {
+        width: 210mm;
+        /* height: 297mm; */
+        /*height: 282mm;*/
+        overflow:visible !important;
+    }
+    .wrapperSection div:nth-child(5){
+        
+        page-break-before:always;
+    }
+
+
+    #watermark{
+        display: block;
+        position: fixed; /*apare pe toate paginile*/
+        bottom:0;
+        width: 4cm;
+        height: 1cm;
+        right: 0;
+        text-align: center;
+        color:rgba(0,0,0,0.4);
+    }
+    #watermark::after{
+        opacity:0.4;
+        padding:5px;
+        display: block;
+        background: white;
+        border: 3px solid black;
+        border-radius: 10px 10px 10px 10px;
+        content: "Radu Gheorghe";
+        font-weight: bold;
+        overflow-wrap: break-word;
+    }
+    .videoVTT, .vid-iframe{
+        display: none;
+    }
+    #instrumente, #link-top{
+        display: none;
+    }
+    a { 
+        text-decoration: none; 
+        color: #000 
+    }
+    #end{
+         page-break-before: always;
+    }
+}
+
+@page {
+    size: A4 portrait;
+    margin-bottom:2cm;
+    margin-top:2cm;
+    counter-increment: page;
+        
+}
+@page:left{
+
+    margin-left:3cm;
+    margin-right:1cm;
+    border-radius: 20cm;
+}
+@page:right{
+
+    margin-right:3cm;
+    margin-left:1cm;
+}

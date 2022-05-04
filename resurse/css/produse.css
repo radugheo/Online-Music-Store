@@ -1,0 +1,84 @@
+main{
+    --padd-main:1rem;
+    padding-left:var(--padd-main);
+    padding-right:var(--padd-main);
+    --color1: #e0af3a;
+    --color2: #ffe5a1;
+    --color3: #711f31;
+    --color4: #9e3845;
+    --color5: #355367;
+}
+
+.grid-produse{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:1rem;
+}
+.grid-produse .produs{
+    border-radius: 1rem;
+    box-shadow: 0px 0px 0.5rem 0.1rem black;
+    overflow: hidden;
+}
+
+.grid-produse .produs h3{
+    background-color: var(--color1);
+    text-align: center;
+    margin-top: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.grid-produse .produs h3 a{
+    color:black;
+}
+.grid-produse .produs h3 a:hover{
+    color:white;
+}
+.grid-produse .produs figure{
+    text-align: center;
+}
+.grid-produse .produs figure img{
+    border:1px solid grey
+}
+.grid-produse .produs .info-prod{
+    display:flex;
+    background-color: var(--color1);
+}
+.grid-produse .produs .info-prod p{
+    width:30%;
+    text-align:center;
+    font-weight:bold;
+}
+
+.grid-produse .produs p.categorie{
+
+    text-align:center;
+    font-weight:bold;
+}
+
+.info-produse{
+    background-color: var(--color4);
+    padding:0.2rem;
+    box-shadow: 0px 0px 0.5rem 0.15rem grey;
+}
+
+.produs{
+    position: relative;
+}
+.selecteaza-cos{
+    display: inline-block;
+    background-color: var(--color2);
+    position:absolute;
+    bottom:0.5rem;
+    right:0.9rem;
+    border-radius: 0.9rem;
+    text-align: center;
+    padding:0.3rem;
+    border:1px solid transparent;
+}
+
+.selecteaza-cos:hover{
+    background-color: var(--color1);
+    
+    border:1px solid  var(--color3);
+}

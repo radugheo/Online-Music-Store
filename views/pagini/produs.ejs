@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <meta name="keywords" content="muzica, instrumente, sunet, audio, profesionist, chitara, tobe, bass, bete de tobe, chitara electrica, chitara clasica, chitara acustica, saxofon, clarinet, vioara, melodie, cursuri, amplificator, sistem audio, boxe, casti">
+        <meta name="description" content="Magazin de instrumente muzicale">
+        <meta name="author" content="Radu Mihai Gheorghe">
+        <title>R_Music</title>
+        <%- include("../fragmente/head") %>     
+        <link href="/resurse/css/produs.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+    <%- include("../fragmente/header") %>
+
+    <main>
+        <section>
+            <h2>Pagină produs</h2>
+                <article id="art-produs">
+                    <h3><span class="nume"><%- locals.prod.nume %></span></h3>
+                    <p>Pret: <span class="pret"><%- locals.prod.pret %> </span></p>
+                    <p>Descriere: <span class="descriere"><%- locals.prod.descriere %> </span></p>
+                    <p>Pret: <span class="pret"><%- locals.prod.pret %> </span></p>
+                    <p>Greutate: <span class="greutate"><%- locals.prod.greutate %> </span></p>
+                    <p>Caracteristici: <span class="caracteristici"><%- locals.prod.caracteristici %> </span></p>
+                    <p>Categorie: <span class="categorie"><%- locals.prod.categorie %> </span></p>
+                    <p>Culoare: <span class="culoare"><%- locals.prod.culoare %> </span></p>
+                    <p>Pentru stangaci: <span class="pentru-stangaci"><%- locals.prod.pentru_stangaci %> </span></p>
+                    <p>Data adaugare: <span class="data-adaugare"><%- locals.prod.data_adaugare %> </span></p>
+                    <figure class="imag-produs">
+                        <img  src="/resurse/img/produse/<%- locals.prod.imagine %>" alt="[imagine <%- locals.prod.nume %>]" />
+                    </figure>    
+                </article>
+            
+        </section>
+    </main>
+
+    <%- include("../fragmente/footer") %>
+    </body>
+</html>

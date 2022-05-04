@@ -1,0 +1,97 @@
+{
+    "cale_galerie":"resurse/img/galerie",
+    "imagini":[
+        {
+            "fisier":"acordeon_300x300.jpg",
+            "descriere":"Acesta este un acordeon.",
+            "alt":"acordeon",
+            "anotimp":"primavara"
+        },
+
+        {
+            "fisier":"bass1_300x300.jpg",
+            "descriere":"Acesta este un model de chitara bass.",
+            "alt":"bass1",
+            "anotimp":"primavara"
+        },
+
+        {
+            "fisier":"bass2_300x300.jpg",
+            "descriere":"Acesta este un model de chitara bass.",
+            "alt":"bass2",
+            "anotimp":"primavara"
+        },
+
+        {
+            "fisier":"drums1_300x300.jpg",
+            "descriere":"Acesta este un model de tobe.",
+            "alt":"tobe1",
+            "anotimp":"primavara"
+        },
+
+        {
+            "fisier":"drums2_300x300.jpg",
+            "descriere":"Acesta este un model de tobe.",
+            "alt":"tobe2",
+            "anotimp":"primavara"
+        },
+
+        {
+            "fisier":"drums3_300x300.jpg",
+            "descriere":"Acesta este un model de tobe.",
+            "alt":"tobe3",
+            "anotimp":"primavara"
+        },
+
+        {
+            "fisier":"guitar1_300x300.jpg",
+            "descriere":"Acesta este un model de chitara.",
+            "alt":"chitara1",
+            "anotimp":"primavara"
+        },
+
+        {
+            "fisier":"guitar2_300x300.jpg",
+            "descriere":"Acesta este un model de chitara.",
+            "alt":"chitara2",
+            "anotimp":"primavara"
+        },
+
+        {
+            "fisier":"guitar3_300x300.jpg",
+            "descriere":"Acesta este un model de chitara.",
+            "alt":"chitara3",
+            "anotimp":"primavara"
+        },
+
+        {
+            "fisier":"orga_300x300.jpg",
+            "descriere":"Acesta este un model de orga.",
+            "alt":"orga",
+            "anotimp":"primavara"
+        },
+
+        {
+            "fisier":"pian_1_300x300.jpg",
+            "descriere":"Acesta este un model de pian.",
+            "alt":"pian",
+            "anotimp":"primavara"
+        },
+
+        {
+            "fisier":"saxofon_300x300.jpg",
+            "descriere":"Acesta este un model de safoxon.",
+            "alt":"saxon",
+            "anotimp":"primavara"
+        },
+
+        {
+            "fisier":"violin_300x300.jpg",
+            "descriere":"Acesta este un model de vioara.",
+            "alt":"violin",
+            "anotimp":"primavara"
+        }
+
+    ]
+
+}

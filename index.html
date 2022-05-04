@@ -15,47 +15,50 @@
         <meta name="theme-color" content="#ffffff">
 
         <link href="css/style.css" rel="stylesheet" type="text/css" />
-        <link href="css/nav.css" rel="stylesheet type=text/css" />
-        <link href="css/nav-500.css" rel="stylesheet type=text/css" media="screen and (max-width:700px)"/>
+        <link href="css/nav.css" rel="stylesheet" type="text/css" />
+        <link href="css/nav-500.css" rel="stylesheet" type="text/css" media="screen and (max-width:700px)"/>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hubballi|League+Gothic|Quicksand">
+        <link rel="stylesheet" href="./resurse/fontawesome/fontawesome-free-6.0.0-web/css/all.min.css">
 
         <title>R_Music</title>
     </head>
     <body>
         <header id="header">
-            <h1><span>R_Music</span></h1>
-            <nav>
-                <label id="hamburger" for="ch-menu">
-                    <img src="resurse/img/Hamburger_icon_alb.png" alt="menu">
-                </label>
-                <input id="ch-menu" type="checkbox">
-                <ul class="meniu">
-                    <li><div>Acasa</div>
-                        <ul>
-                            <li><a href="#welcome">Bine ati venit</a></li>
-                            <li><a href="#instrumente">Instrumente muzicale</a></li>
-                            <li><a href="#accesorii">Accesorii</a></li>
-                            <li><a href="#microfoane">Microfoane</a></li>
-                            <li><a href="#boxe">Boxe</a></li>
-                            <li><a href="#casti" class="list-item">Casti</a></li>
-                            <li><a href="#merch" class="list-item">Merch</a></li>
-                            <li><a href="#promotii" class="list-item">Promotii</a></li>
-                        </ul>
-                    </li>
-                    <li class="gradientBar"><a href="#inregistrare">Inregistrare</a></li>
-                    <li><div id="test" >Despre</div>
-                        <ul>                        
-                            <li><a href="despre.html#prezentare">Prezentare</a></li>
-                            <li><a href="despre.html#istoric">Istoric</a></li>
-                            <li><a href="despre.html#motivatie">Motivatie</a></li>
-                            <li><a href="despre.html#galerie">Galerie</a></li>
-                        </ul>
-                    </li>
-                    <li class="gradientBar"><a href="#detalii">Detalii</a></li>
-                    <li class="gradientBar"><a href="#faq">F.A.Q.</a></li>
-                    <li class="gradientBar"><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+            <h1><span>R_Music</span> <span class="fas fa-compact-disc fa-solid fa-fw"></span></h1>
         </header>
+        <nav>
+            <label id="hamburger" for="ch-menu">
+                <img src="resurse/img/Hamburger_icon_alb.png" alt="menu">
+            </label>
+            <input id="ch-menu" type="checkbox">
+            <ul class="meniu">
+                <li><div>Acasa</div>
+                    <ul>
+                        <li><a href="#welcome">Bine ati venit</a></li>
+                        <li><a href="#instrumente">Instrumente</a></li>
+                        <li><a href="#accesorii">Accesorii</a></li>
+                        <li><a href="#microfoane">Microfoane</a></li>
+                        <li><a href="#boxe">Boxe</a></li>
+                        <li><a href="#casti" class="list-item">Casti</a></li>
+                        <li><a href="#merch" class="list-item">Merch</a></li>
+                        <li><a href="#promotii" class="list-item">Promotii</a></li>
+                    </ul>
+                </li>
+                <li class="gradientBar"><a href="#inregistrare">Inregistrare</a></li>
+                <li><div id="test" >Despre</div>
+                    <ul>                        
+                        <li><a href="despre.html#prezentare">Prezentare</a></li>
+                        <li><a href="despre.html#istoric">Istoric</a></li>
+                        <li><a href="despre.html#motivatie">Motivatie</a></li>
+                        <li><a href="despre.html#galerie">Galerie</a></li>
+                    </ul>
+                </li>
+                <li class="gradientBar"><a href="#detalii">Detalii</a></li>
+                <li class="gradientBar"><a href="#faq">F.A.Q.</a></li>
+                <li class="gradientBar"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
         <main>
             <div class="wrapper">   
                 <div id="area1" class="wrapperSection">
@@ -115,7 +118,7 @@
                 </div>
                 <p>Aici gasiti toate instrumentele muzicale pe care le oferim spre vanzare.</p>
                 <section id="chitare">
-                    <h3>Chitare</h3>
+                    <h3>Chitare<span> <span class="fas fa-guitar fa-solid fa-fw fa-spin-hover"></span></h3>
                     <p><a href="https://www.muziker.ro/" target="_blank">Un site asemanator.</a></p>
                     <ul>
                         <li><a href="#chitareElectrice">Electrice</a></li>
@@ -124,7 +127,7 @@
                         <li><a href="#chitareElectroAcustice">Electro-acustice</a></li>
                         <li><a href="#chitareUkulele">Ukulele</a></li>
                     </ul>
-                    <h3>Basuri</h3>
+                    <h3>Basuri<span> <span class="fas fa-guitar fa-solid fa-fw fa-spin-hover"></span></h3>
                     <ul>
                         <li><a href="#basuriElectrice">Electrice</a></li>
                         <li><a href="#basuriAcustice">Acustice</a></li>
@@ -153,19 +156,24 @@
                 <p><b>Detalii</b> despre platforma:</p>
                 <aside>
                     <ul>
+                        <li>Stilizarea a fost facuta cu ajutorul <abbr title="Cascading Style Sheets">CSS</abbr></li>
                         <li>Este menita sa permita tuturor utilizatorilor sa achizitioneze orice instrument muzical dorit.</li>
                         <li>Produse calitative si calitate garantata!</li>
-                        <li><i>Retur gratuit in maxim 30 de zile.</i></li>
+                        <li><strong>Retur gratuit in maxim 30 de zile.</strong></li>
                     </ul>
                 </aside>
+                <p><dfn>CSS</dfn> este un standard pentru formatarea elementelor unui document HTML</p>
             </section>
             <details id="oferte">
                 <summary>Detalii despre oferte</summary>
+                    <i>Merry Chrysler!</i><p>Adica, croaziera, cum ar veni, nu?</p>
+                    <p><em>Nu puteti</em> rata ofertele astea!</p>
                     <p>La orice comanda de minim <s>200</s> <ins>100</ins> de ron, aveti asigurat transportul gratuit din partea noastra!</p>
                     <p>La o chitara electrica cumparata, primiti si un cablu Ibanez gratuit!</p>
             </details><br>
             <section id="warning">
                 <h2><strong>Atentie! Covid inca este printre noi! Purtati masca!</strong></h2>
+                <p>Asa cum spunea Gheorghe Hagi: <q>Viata e frumoasa, dar merita traita!</q></p>
             </section>
             <section id="faq">
                 <h2>F.A.Q.</h2>
