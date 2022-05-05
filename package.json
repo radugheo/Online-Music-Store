@@ -9,5 +9,12 @@
     "pg": "^8.7.3",
     "sass": "^1.49.10",
     "sharp": "^0.30.3"
+  },
+  "engines": {
+    "node": "16.x"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

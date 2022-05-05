@@ -82,6 +82,14 @@ body {
     }
 }
 
+#gstatica summary { 
+    cursor: pointer;
+}
+  
+#gstatica summary > * {
+    display: inline;
+}
+
 .videoVTT{
     width: 50%;
     display: block;
