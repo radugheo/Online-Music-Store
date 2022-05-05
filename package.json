@@ -15,10 +15,7 @@
     "node": "16.x"
   },
   "scripts": {
-    "dev": "react-scripts start",
     "start": "serve -s build",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
     "heroku-postbuild": "npm run build"
   }
 }
