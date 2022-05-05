@@ -8,13 +8,18 @@
     "nodemon": "^2.0.16",
     "pg": "^8.7.3",
     "sass": "^1.49.10",
+    "serve": "^13.0.2",
     "sharp": "^0.30.3"
   },
   "engines": {
     "node": "16.x"
   },
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "react-scripts start",
+    "start": "serve -s build",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
   }
 }
