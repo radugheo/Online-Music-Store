@@ -1,6 +1,7 @@
 h2{
     padding:0.4rem;
 }
+
 #art-produs{
     margin:0 auto;
     width:70%;
@@ -20,15 +21,19 @@ h2{
 #art-produs p span{
     font-weight: normal;
 }
+
 #art-produs p:nth-of-type(even){
     background-color: var(--culoare-roz-inchis);
 }
+
 #art-produs p:nth-of-type(odd){
     background-color: var(--cl-marcare);
 }
+
 .imag-produs{
     text-align: center;
 }
+
 .imag-produs img{
     width:50%;
     height:auto;

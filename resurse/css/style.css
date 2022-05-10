@@ -18,35 +18,43 @@ body {
                     "zona-7 zona-7 zona-5 zona-6";      
     grid-template-columns: 1fr 1fr 1fr 1fr;        
 }
+
 .wrapperSection{
     background-color: #e0af3a;
     padding: 10px;
 }
+
 #area1{  
     grid-area: zona-1; 
 }
+
 #area2{  
     grid-area: zona-2; 
     display: flex;
     flex-direction:column;
     align-items: center;
-    /*ultimele 3 linii sunt pentru tabel*/
 }
+
 #area3{  
     grid-area: zona-3;
 }
+
 #area4{  
     grid-area: zona-4; 
 }
+
 #area5{  
     grid-area: zona-5; 
 }
+
 #area6{  
     grid-area: zona-6; 
 }
+
 #area7{  
     grid-area: zona-7; 
 }
+
 #area8{  
     grid-area: zona-8; 
     text-align: center;
@@ -153,9 +161,11 @@ body {
     border-top: none;
     border-bottom: none;
 }
+
 #link-top:hover{
     opacity:1;
 }
+
 #triangle{
     position:absolute;
     bottom:16px;
@@ -172,14 +182,11 @@ body {
     border-bottom: 15px solid var(--color4);  
 }
 
-
-
 #watermark, #absolut{
     display: none;
 }
 
 @media print {
-
     #absolut{
         position: absolute;
         display: inline-block;
@@ -198,39 +205,29 @@ body {
         width:70%;
         display: inline-block;
     }
-
     h1{
         page-break-after: always;
         margin-top: 50%;
         text-align:center;
         margin-left:1cm;
     }
-
     .wrapperSection{
         font-size: 10px;
         box-sizing:border-box;
         page-break-before:always;
         background-color: white;
-        /*
-            grid-template-rows: calc(100vh - 10px) 100vh 100vh 100vh;*/
-
         display:block;
     }
     html, body {
         width: 210mm;
-        /* height: 297mm; */
-        /*height: 282mm;*/
         overflow:visible !important;
     }
     .wrapperSection div:nth-child(5){
-        
         page-break-before:always;
     }
-
-
     #watermark{
         display: block;
-        position: fixed; /*apare pe toate paginile*/
+        position: fixed; 
         bottom:0;
         width: 4cm;
         height: 1cm;
@@ -271,10 +268,12 @@ body {
     counter-increment: page;
         
 }
+
 @page:left{
 
     margin-left:3cm;
     margin-right:1cm;
+    
     border-radius: 20cm;
 }
 @page:right{

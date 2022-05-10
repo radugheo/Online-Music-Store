@@ -11,9 +11,11 @@
     border:1px solid black;
     padding:0.2rem;
 }
+
 #tab-orar{
     border-collapse: collapse;
 }
+
 #tableContainer{
     border: 2px solid black;
     border-radius: 20px 20px 20px 20px;
@@ -43,10 +45,6 @@
 #tab-orar .columnAlternateReverse td:nth-child(odd){
     background: var(--color4);
 }
-
-/*
-#tr : hover td
-*/
 
 #orarCaption{
     caption-side: bottom;

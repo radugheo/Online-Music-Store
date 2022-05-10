@@ -31,19 +31,24 @@ main{
 .grid-produse .produs h3 a{
     color:black;
 }
+
 .grid-produse .produs h3 a:hover{
     color:white;
 }
+
 .grid-produse .produs figure{
+   
     text-align: center;
 }
 .grid-produse .produs figure img{
     border:1px solid grey
 }
+
 .grid-produse .produs .info-prod{
     display:flex;
     background-color: var(--color1);
 }
+
 .grid-produse .produs .info-prod p{
     width:30%;
     text-align:center;
@@ -65,6 +70,7 @@ main{
 .produs{
     position: relative;
 }
+
 .selecteaza-cos{
     display: inline-block;
     background-color: var(--color2);

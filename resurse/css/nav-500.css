@@ -1,16 +1,13 @@
-/*facem vizibil iconul de hamburger meniu*/
-
 #hamburger{
     display:block;
 }
-/* implicit meniul e ascuns*/
+
 ul.meniu{
     display:none;
     position:absolute;
     width:100%;
 }
 
-/*aici facem vizibil meniul cand faem click pe hamburger meniu*/
 #ch-menu:checked+ul.meniu{
     display: block;
     z-index: 2;
@@ -22,6 +19,7 @@ ul.meniu{
     animation-fill-mode:forwards;
     animation-timing-function:linear;
 }
+
 #ch-menu:checked + ul.meniu>li>div, #ch-menu:checked + ul.meniu>li>a{
     z-index: 2;
     position: relative;
@@ -32,15 +30,15 @@ ul.meniu{
     animation-fill-mode:forwards;
     animation-timing-function:linear;
 }
+
 #ch-menu:checked + ul.meniu>li>div:hover, #ch-menu:checked + ul.meniu>li>a:hover{
     background-color:#28465a;
 }
-/*optiunile se intind pe toata latimea containerului*/
+
 nav ul.meniu li{
     width:100%;
 }
 
-/*meniul sa vina deasupra continutul de mai jos, fara sa impinga continutul*/
 nav ul.meniu>li ul{
     position:absolute;
     width:100%;
