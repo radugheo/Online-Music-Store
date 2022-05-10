@@ -15,7 +15,7 @@
     "node": "16.x"
   },
   "scripts": {
-    "start": "serve -s build",
-    "heroku-postbuild": "npm run build"
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
