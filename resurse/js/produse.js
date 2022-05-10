@@ -201,9 +201,13 @@ window.addEventListener("DOMContentLoaded", function(){
                 suma += parseFloat(art.getElementsByClassName("val-pret")[0].innerHTML);
         }
         var spanSuma;
-        spanSuma = document.createElement("span");
-        spanSuma.innerHTML = " Suma: "+suma;
-        spanSuma.id = "numar-suma";
-        document.getElementById("p-suma").appendChild(spanSuma);
+        spanSuma = document.getElementById("numar-suma");
+        if(!spanSuma){
+            spanSuma = document.createElement("span");
+            spanSuma.innerHTML = " Suma:" + suma;
+            spanSuma.id = "numar-suma";
+            document.getElementById("p-suma").appendChild(spanSuma);
+            setTimeout(function(){document.getElementById("numar-suma").remove()}, 2000);
+        }
     }
  }
