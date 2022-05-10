@@ -7,7 +7,17 @@ const res = require("express/lib/response");
 const { nextTick } = require("process");
 const {Client}=require("pg");
 
-var client = new Client({database:"RMusic", user:"user1", password:"user1", host:"localhost", port:5432});
+//var client = new Client({database:"RMusic", user:"user1", password:"user1", host:"localhost", port:5432});
+var client = new Client({
+    database:"dbmpap1l51mg77", 
+    user:"mlmgnxvalvzezg", 
+    password:"bc0687846e13aabfe2f36d96a44a7592808c8a4c55490e4c1358f66a1d20d1e5", 
+    host:"ec2-3-224-164-189.compute-1.amazonaws.com", 
+    port:5432, 
+    ssl: {
+        rejectUnauthorized: false
+    }
+});
 client.connect();
 
 app= express();
