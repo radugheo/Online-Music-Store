@@ -6,6 +6,9 @@ const { render } = require("express/lib/response");
 const res = require("express/lib/response");
 const { nextTick } = require("process");
 const {Client} = require("pg");
+const formidable = require("formidable");
+const crypto = require("crypto");
+const session = require("express-session");
 //var client = new Client({database:"RMusic", user:"user1", password:"user1", host:"localhost", port:5432});
 var client = new Client({
     database:"dbmpap1l51mg77", 
@@ -18,7 +21,7 @@ var client = new Client({
     }
 });
 client.connect();
-app= express();
+app = express();
 app.set("view engine","ejs");
 app.use("/resurse", express.static(__dirname+"/resurse"))
 console.log("Director proiect:",__dirname);
@@ -45,11 +48,29 @@ app.get("/produs/:id", function(req, res){
 app.get("/galerie", function(req, res){
      res.render("pagini/galerie", {imagini:obImagini.imagini});
 });
+/*-----------------utilizatori-----------------*/
+parolaServer = "tehniciweb";
+app.post("/inreg", function(req, res){
+    var form = new formidable.IncomingForm();
+    form.parse(req, function(err, fields, files){
+        var hash = crypto.scryptSync(fields.parola, parolaServer, 64).toString('hex');
+        var comandaInserare = `insert into utilizatori (username, nume, prenume, email, parola, culoare_chat) values ('${fields.username}', '${fields.nume}', '${fields.prenume}', '${fields.email}', '${hash}', '${fields.culoare_chat}')`;
+        client.query(comandaInserare, function(err, rezQuery){
+            console.log(fields.username);
+            if(err){
+                console.log(err);
+                res.send("Eroare la inregistrare");
+            }else{
+                res.send("Inregistrare cu succes");
+            }
+        });
+    });
+});
 app.get("/*.ejs", function(req, res){
     randeazaEroare(res, 403, true);
 });
 app.get("/*", function(req, res){
-    res.render("pagini"+req.url, function(err, rezRender){
+    res.render("pagini" + req.url, function(err, rezRender){
         if (err){
             if(err.message.includes("Failed to lookup view")){
                 randeazaEroare(res, 404, true);
@@ -102,7 +123,7 @@ function randeazaEroare(res, identificator, status, titlu, text, imagine){
     }
 }
 creeazaErori();
-//app.listen(8080);
 var s_port=process.env.PORT || 8080;
 app.listen(s_port);
+//app.listen(8080);
 console.log("A pornit");

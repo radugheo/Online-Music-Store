@@ -143,6 +143,10 @@ window.addEventListener("DOMContentLoaded", function(){
         sorteaza(-1)
     }
     document.getElementById("resetare").onclick = function(){
+        var articole = document.getElementsByClassName("produs");
+        for(let art of articole){
+            art.style.display = "block";
+        }
         document.getElementById("i_rad3").checked = true;
         document.getElementById("inp-pret1").value = document.getElementById("inp-pret1").min;
         document.getElementById("infoRange1").innerHTML = "(" + document.getElementById("inp-pret1").min + ")";
@@ -150,10 +154,6 @@ window.addEventListener("DOMContentLoaded", function(){
         document.getElementById("infoRange2").innerHTML = "(" + document.getElementById("inp-pret2").max + ")";
         document.getElementById("inp-categorie").value = "toate";
         document.getElementById("numar-suma").remove()
-        var articole = document.getElementsByClassName("produs");
-        for(let art of articole){
-            art.style.display="block";
-        }
     }
 
     // -------------------- selectare produse cos virtual----------------------------------

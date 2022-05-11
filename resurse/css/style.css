@@ -4,8 +4,33 @@ body {
     --color3: #711f31;
     --color4: #9e3845;
     --color5: #355367;
+    --color6: black;
+    --color7: white;
+    --color8: black;
     background-color: var(--color2);
     font-family: 'Quicksand';
+}
+
+body.dark {
+    --color1: #262626;
+    --color2: #141617;
+    --color3: #006e78;
+    --color4: #67afb5;
+    --color5: #006e78;
+    --color6: black;
+    --color7: white;
+    --color8: #cecac3;
+    background-color: var(--color2);
+    font-family: 'Quicksand';
+}
+
+p, h1, h2, h3, address, aside, details, ul, ol, figcaption{
+    color: var(--color8);
+}
+
+#btn_tema{
+    position: relative;
+    top:8px;
 }
 
 .wrapper{
@@ -20,7 +45,7 @@ body {
 }
 
 .wrapperSection{
-    background-color: #e0af3a;
+    background-color: var(--color1);
     padding: 10px;
 }
 
@@ -105,8 +130,8 @@ body {
 }
 
 ::cue{
-    background-color: #355367;
-    color: white;
+    background-color: var(--color5);
+    color: var(--color7);
 }
 
 .btn{
@@ -121,11 +146,11 @@ body {
 .btn-iframe a{
     text-decoration:none;
     width:100px;
-    border:1px solid black;
+    border:1px solid var(--color6);
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
     background-color: var(--color4);
-    color:black;
+    color:var(--color6);
     transition: all 0.5s linear;
     text-align: center;
 }
@@ -135,12 +160,12 @@ body {
 }
 
 .btn-iframe a:hover{
-    color:white;
+    color:var(--color7);
     background-color: var(--color3);
 }
 
 .vid-iframe{
-    border: 2px solid black;
+    border: 2px solid var(--color6);
 }
 
 .fa-spin-hover:hover {
@@ -150,14 +175,13 @@ body {
 #link-top{
     position: fixed;
     opacity:0.7;
-
     bottom:5px;
     right:12px;
     width:40px;
     height:40px;
-    background:rgba(0, 0, 0, 0);
+    background: transparent;
     border-radius: 1.5rem;
-    border:6px solid var(--color5);
+    border: 6px solid var(--color5);
     border-top: none;
     border-bottom: none;
 }
@@ -201,7 +225,7 @@ body {
         position: absolute;
         font-size:10px;
         right:0;
-        border:4px inset black;
+        border:4px inset var(--color6);
         width:70%;
         display: inline-block;
     }
@@ -215,12 +239,12 @@ body {
         font-size: 10px;
         box-sizing:border-box;
         page-break-before:always;
-        background-color: white;
+        background-color: var(--color7);
         display:block;
     }
     html, body {
         width: 210mm;
-        overflow:visible !important;
+        overflow: visible !important;
     }
     .wrapperSection div:nth-child(5){
         page-break-before:always;
@@ -239,8 +263,8 @@ body {
         opacity:0.4;
         padding:5px;
         display: block;
-        background: white;
-        border: 3px solid black;
+        background: var(--color7);
+        border: 3px solid var(--color6);
         border-radius: 10px 10px 10px 10px;
         content: "Radu Gheorghe";
         font-weight: bold;
@@ -254,7 +278,7 @@ body {
     }
     a { 
         text-decoration: none; 
-        color: #000 
+        color: var(--color6) 
     }
     #end{
          page-break-before: always;

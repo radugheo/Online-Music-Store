@@ -97,7 +97,7 @@
     text-align: center;
     margin: auto;
     font-size: 15px;
-    color: white;
+    color: var(--color7);
     counter-increment: nrimag 1; 
 }
 

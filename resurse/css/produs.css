@@ -6,8 +6,8 @@ h2{
     margin:0 auto;
     width:70%;
     max-width:700px;
-    background-color: var(--cl-light-t);
-    box-shadow: 0px 0px 10px 5px grey;
+    background-color: var(--color1);
+    box-shadow: 0px 0px 2px 2px grey;
     padding:0.4rem;
 }
 
@@ -23,11 +23,11 @@ h2{
 }
 
 #art-produs p:nth-of-type(even){
-    background-color: var(--culoare-roz-inchis);
+    background-color: var(--color2);
 }
 
 #art-produs p:nth-of-type(odd){
-    background-color: var(--cl-marcare);
+    background-color: var(--color1);
 }
 
 .imag-produs{

@@ -1,12 +1,11 @@
 main{
-    --padd-main:1rem;
-    padding-left:var(--padd-main);
-    padding-right:var(--padd-main);
-    --color1: #e0af3a;
-    --color2: #ffe5a1;
-    --color3: #711f31;
-    --color4: #9e3845;
-    --color5: #355367;
+    --padd-main: 1rem;
+    padding-left: var(--padd-main);
+    padding-right: var(--padd-main);
+}
+
+p, h1, h2, h3, address, aside, details, ul, ol, figcaption, #filtrare1{
+    color: var(--color8);
 }
 
 .grid-produse{
@@ -16,12 +15,13 @@ main{
 }
 .grid-produse .produs{
     border-radius: 1rem;
-    box-shadow: 0px 0px 0.5rem 0.1rem black;
+    box-shadow: 0px 0px 0.1rem 0.1rem var(--color4);
+    background-color: var(--color1);
     overflow: hidden;
 }
 
 .grid-produse .produs h3{
-    background-color: var(--color1);
+    background-color: var(--color3);
     text-align: center;
     margin-top: 0;
     padding-top: 0.5rem;
@@ -29,24 +29,23 @@ main{
 }
 
 .grid-produse .produs h3 a{
-    color:black;
+    color:var(--color6);
 }
 
 .grid-produse .produs h3 a:hover{
-    color:white;
+    color:var(--color7);
 }
 
 .grid-produse .produs figure{
-   
     text-align: center;
 }
 .grid-produse .produs figure img{
-    border:1px solid grey
+    border:1px solid var(--color3)
 }
 
 .grid-produse .produs .info-prod{
     display:flex;
-    background-color: var(--color1);
+    background-color: var(--color4);
 }
 
 .grid-produse .produs .info-prod p{
@@ -73,7 +72,7 @@ main{
 
 .selecteaza-cos{
     display: inline-block;
-    background-color: var(--color2);
+    background-color: var(--color1);
     position:absolute;
     bottom:0.5rem;
     right:0.9rem;
@@ -84,7 +83,6 @@ main{
 }
 
 .selecteaza-cos:hover{
-    background-color: var(--color1);
-    
-    border:1px solid  var(--color3);
+    background-color: var(--color4);
+    border:1px solid  var(--color6);
 }

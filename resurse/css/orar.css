@@ -1,14 +1,9 @@
 #tab-orar{
-    --color1: #e0af3a;
-    --color2: #ffe5a1;
-    --color3: #711f31;
-    --color4: #9e3845;
-    --color5: #355367;
     text-align:center;
 }
 
 #tab-orar td, #tab-orar th{
-    border:1px solid black;
+    border:1px solid var(--color6);
     padding:0.2rem;
 }
 
@@ -17,7 +12,7 @@
 }
 
 #tableContainer{
-    border: 2px solid black;
+    border: 2px solid var(--color6);
     border-radius: 20px 20px 20px 20px;
     overflow: hidden;
 }
@@ -48,6 +43,7 @@
 
 #orarCaption{
     caption-side: bottom;
+    background-color: var(--color4);
 }
 
 @media (max-width: 500px) {
