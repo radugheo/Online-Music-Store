@@ -9,26 +9,23 @@
         <script type="text/javascript" src=/resurse/js/inregistrare.js></script>
     </head>
     <body>
-    <%- include("../fragmente/header") %>
-
-    <main>
-    <div class="afisaj">
-        <h1>Inregistrare utilizator</h1>
-		
-			<%-include("../fragmente/formular", {action: "/inreg"}) %>
-	
-	<% if(locals.raspuns) { %>
-	<%- locals.raspuns+"<br/>"%>
-	<% } %>
-	<% if(locals.err) { %>
-	<%- locals.err %>
-	<% } %>
-    </div>
-</main>
-
-<footer>
-    <%- include("../fragmente/footer") %>
-</footer>
-
-</body>
+        <%- include("../fragmente/header") %>
+        <main>
+            <div class="afisaj">
+                <h1>Inregistrare utilizator</h1>
+                <% if(!locals.raspuns) { %>
+                    <%-include("../fragmente/formular", {action: "/inreg"}) %>
+                <% } %>
+                <% if(locals.raspuns) { %>
+                    <%- locals.raspuns + "<br/>"%>
+                <% } %>
+                <% if(locals.err) { %>
+                    <%- locals.err %>
+                <% } %>
+            </div>
+        </main>
+        <footer>
+            <%- include("../fragmente/footer") %>
+        </footer>
+    </body>
 </html>

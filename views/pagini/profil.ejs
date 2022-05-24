@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="ro">
 	<head>
-		<title>Profil</title>
+		<title>R_Music - Profil</title>
 		<%- include("../fragmente/head") %>
-        
 		<link rel="stylesheet" type="text/css" href="/resurse/css/contact.css" />
 		<script>
-
 			// populez inputurile din pagina de profil cu datele din tabel (incarcate prin EJS)
 			window.addEventListener("DOMContentLoaded", function(){
-				document.getElementById("inp-username").value="<%= locals.utilizator.username %>";
-				document.getElementById("inp-username").readOnly=true;
-				document.getElementById("inp-nume").value="<%= locals.utilizator.nume %>";
-				document.getElementById("inp-prenume").value="<%= locals.utilizator.prenume %>";
-				document.getElementById("inp-email").value="<%= locals.utilizator.email %>";
+				document.getElementById("inp-username").value = "<%= locals.utilizator.username %>";
+				document.getElementById("inp-username").readOnly = true;
+				document.getElementById("inp-nume").value = "<%= locals.utilizator.nume %>";
+				document.getElementById("inp-prenume").value = "<%= locals.utilizator.prenume %>";
+				document.getElementById("inp-email").value = "<%= locals.utilizator.email %>";
 				document.getElementById("p-reintrod").remove();
-				var optiuni=document.getElementById("sel-culoare").options
+				var optiuni=document.getElementById("sel-culoare").options;
 				for (let opt of optiuni)
 					if (opt.value=="<%= locals.utilizator.culoare_chat %>")
 						opt.selected=true;
@@ -27,16 +25,17 @@
 			<%- include("../fragmente/header") %>
 		</header>
 		<main>
-		
 			<section>
 				<h2>Profil</h2>
-                <p>Mănânci prea multe prajituri și știi și tu asta!</p>
+                <p>Bine ai venit pe profilul tau!</p>
+				<p>Aici poti schimba datele de pe contul tau.</p>
 				<p><%= locals.raspuns %></p>
 			</section>
-			<%- include("../fragmente/formular",{action:"/profil"}) %>
+			<%- include("../fragmente/formular", {action:"/profil"}) %>
 		</main>
-		
-		<%- include("../fragmente/footer") %>
+		<footer>
+			<%- include("../fragmente/footer") %>
+		</footer>
 		
 	</body>
 </html>

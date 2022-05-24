@@ -13,11 +13,16 @@
             "text": "Accesul interzis",
             "imagine":"locked_cd.jpg"
         },
-
         {
             "identificator":1,
             "titlu":"Work in Progress",
             "text": "Această pagină este în curs de dezvoltare",
+            "imagine":"confused.jpg"
+        },
+        {
+            "identificator":2,
+            "titlu":"Eroare baza de date",
+            "text": "Reveniti mai tarziu",
             "imagine":"confused.jpg"
         }
     ]
